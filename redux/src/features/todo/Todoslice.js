@@ -2,14 +2,14 @@ import { createSlice,nanoid } from "@reduxjs/toolkit";
 const initialState ={
 
     todos:[{
-        id:1,text :'hello',completed : false
+        id:1,text :'hello',completed : false  //by default
     }]
 }
 export const todoslice =createSlice({
     name: 'todo',
     initialState,
     reducers:{   // in context api we declare funtion here but decribe in app jsx..but we do here
-        addtodo:(state,action)=>{
+        addtodo:(state,action)=>{ // in state weget updated state value in store
             const todo = {
              id:nanoid(),
              text :action.payload}
@@ -25,5 +25,5 @@ export const todoslice =createSlice({
         }
     }
 })
-export const {addtodo,removetodo,updatetodo} = todoslice.actions
+export const {addtodo,removetodo,updatetodo} = todoslice.actions //export individual reducers
 export default todoslice.reducer
