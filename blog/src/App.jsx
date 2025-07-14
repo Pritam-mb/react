@@ -19,16 +19,16 @@ function App() {
         dispatch(logout({userdata}))
       }
     }).finally(()=> setloading(false))
-  })
+  },[])
 
   return (!loading)?(
-    <div className='min-h-screen flex flex-wrap'><div>
-      <Header/>
-      <p>todo</p>
-      <main>
-
-      </main>
-      <Footer/></div></div>
+    <div className='min-h-screen flex flex-wrap'>
+      <div className='w-full block'>
+       <Header/>
+       <main></main>
+       <Footer/>
+      </div>
+    </div>
   ):null
   
 }
