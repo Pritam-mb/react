@@ -6,6 +6,12 @@ import Container from './container/Container'
 import Input from './Input'
 import RTE from './RTE'
 import Select from './Select'
+import Login from './Login'
+import Post from './post form/Post'
+import Signup from './Signup'
+import Button from './Button'
+import Postcard from './Postcard'
+
 export{
     Header,
     Footer,
@@ -14,5 +20,11 @@ export{
     Container,
     Input,
     RTE,
-    Select
+    Select,
+    Login,
+    Signup,
+    Post,
+    Button,
+    Postcard
+
 }
