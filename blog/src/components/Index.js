@@ -8,10 +8,10 @@ import RTE from './RTE'
 import Select from './Select'
 import Login from './Login'
 import Post from './post form/Post'
-import Signup from './Signup'
+import Signup from '../components/Signup'
 import Button from './Button'
 import Postcard from './Postcard'
-
+import Protected from './Protected'
 export{
     Header,
     Footer,
@@ -25,6 +25,7 @@ export{
     Signup,
     Post,
     Button,
-    Postcard
+    Postcard,
+    Protected
 
 }

@@ -1,7 +1,7 @@
 import Config from "../config/Config";
 import {Client,ID,Databases,Storage, Query} from "appwrite"
 
-export class Databases{
+export class Service{
     client = new Client()
     databases;
     Storage; // bucket
@@ -16,7 +16,8 @@ export class Databases{
     async createPost({title,slug,content,featureimg,status,userid}){
         try{
             return await this.databases.createDocument(
-                Config.appwritedatabaseid,Config.appwritecollectionid,slug,
+                Config.appwritedatabaseid,
+                Config.appwritecollectionid,slug,
                 {
                     title,
                     content,
@@ -124,5 +125,5 @@ export class Databases{
         )
      }
     }
-const service= new Databases();
+const service= new Service();
 export default service

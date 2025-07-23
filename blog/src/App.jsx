@@ -8,6 +8,7 @@ import {useDispatch} from 'react-redux'
 import { Header,Footer} from './components/Index'
 import authService from './appwrite/Auth'
 import { login, logout } from './store/Authslice'
+import { Outlet } from 'react-router-dom'
 function App() {
   const [loading, setloading] = useState(true)
   const dispatch = useDispatch()
@@ -19,13 +20,13 @@ function App() {
         dispatch(logout({userdata}))
       }
     }).finally(()=> setloading(false))
-  },[])
+  },[dispatch])
 
   return (!loading)?(
     <div className='min-h-screen flex flex-wrap'>
       <div className='w-full block'>
        <Header/>
-       <main></main>
+       <main>todo : <Outlet/></main>
        <Footer/>
       </div>
     </div>

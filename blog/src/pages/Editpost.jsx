@@ -2,7 +2,7 @@ import React, { use } from 'react'
 import { useEffect ,useState} from 'react'
 import appwriteService from '../appwrite/Conf'
 import { useNavigate,useParams } from 'react-router-dom'
-import { Postform, Container } from '../components/Index'
+import { Post, Container } from '../components/Index'
 function Editpost() {
     const [post, setPost] = useState(null);
     const { slug } = useParams();
@@ -21,7 +21,7 @@ function Editpost() {
   return post ? (
     <div className='py-8'>
         <Container>
-            <Postform post={post} />
+            <Post post={post} />
         </Container>
     </div>
   ) : null
