@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React, { useEffect } from 'react'
 import { Postcard, Container } from '../components/Index'
 import appwriteService from '../appwrite/Conf'
 function Allpost() {

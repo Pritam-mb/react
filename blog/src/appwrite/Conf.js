@@ -29,7 +29,7 @@ export class Service{
         }
 
             catch(error){
-                console.log("error");
+                console.log("Appwrite createPost error:", error);
                 
             }
         
@@ -118,7 +118,7 @@ export class Service{
         }
      }
 
-     getfilepreview(){
+     getfilepreview(fieldid){
         return this.Storage.getFilePreview(
             Config.appwritebucketid,
             fieldid

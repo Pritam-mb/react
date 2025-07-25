@@ -37,7 +37,7 @@ import { useSelector } from 'react-redux'
             if (file) {
                 const fileId = file.$id;
                 data.featureimg = fileId;
-                const dbPost = await appwriteService.createPost({ ...data, userId: userdata.$id });
+                const dbPost = await appwriteService.createPost({ ...data, userid: userdata.$id });
 
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
@@ -97,7 +97,7 @@ import { useSelector } from 'react-redux'
                 {post && (
                     <div className="w-full mb-4">
                         <img
-                            src={appwriteService.getfilepreview(post.featuredImage)}
+                            src={appwriteService.getfilepreview(post.featureimg)}
                             alt={post.title}
                             className="rounded-lg"
                         />
