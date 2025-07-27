@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Config from './config/Config'
 import './App.css'
 import {useDispatch} from 'react-redux'
 // import  Header  from './components/header/Header'
@@ -10,6 +11,11 @@ import authService from './appwrite/Auth'
 import { login, logout } from './store/Authslice'
 import { Outlet } from 'react-router-dom'
 function App() {
+  console.log(import.meta.env.VITE_APPWRITE_URL)
+  console.log(import.meta.env.VITE_APPWRITE_PROJECT_ID)
+  console.log(import.meta.env.VITE_APPWRITE_DATABASE_ID)
+  console.log(import.meta.env.VITE_APPWRITE_COLLECTION_ID)
+  console.log(Config.appwritebucketid)
   const [loading, setloading] = useState(true)
   const dispatch = useDispatch()
   useEffect(()=>{
